@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,9 +18,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "src"
+  },
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "": ["src/"],
+      "@assets": ["./src/assets/", "./src/assets/*/index"],
+      "@pages": ["./src/pages/", "./src/pages/*/index"],
+      "@styles": ["./src/styles/"],
+      "@services": ["./src/services/", "./src/services/*/index"],
+      "@services": ["./src/components/", "./src/components/*/index"],
+      "@transfer-objects": [
+        "./src/transfer-objects/*",
+        "./src/transfer-objects/*/index"
+      ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
